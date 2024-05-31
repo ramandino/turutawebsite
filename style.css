@@ -1,0 +1,124 @@
+@keyframes blink {
+    40%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    font-weight: 700;
+    font-size: 23px;
+    margin-bottom:1px;
+
+}
+
+.navleft{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: auto;
+
+
+}
+img{
+    height: 35px;
+}
+
+*{
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
+    margin-top:5px;
+    margin-left: 0;
+    margin-right: 0;
+    
+
+}
+#navitems{
+    margin-left: 3rem;
+    display: flex;
+    gap: 1rem;
+}
+
+#navright{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+}
+#navright a{
+    display: flex;
+}
+
+a{
+    color: #002557;
+
+}
+
+#live{
+    background-color: red;
+    color: white;
+    padding:  7px;
+    border-radius: 20px;  
+    animation: blink 2s infinite ease-in-out 2s;
+ 
+}
+
+a:hover {
+    color: #007bff;
+}
+
+h1{
+    margin-left: 5rem;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 70px;
+    margin-top: 9rem;
+    margin-bottom: 0;
+}
+
+h4{
+    margin-left: 5rem;
+    font-size: 25px;
+    margin-top: 2rem;
+
+
+
+}
+
+.newsletter {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2rem;
+    margin-left: 5rem;
+}
+
+.email-input {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+}
+
+.subscribe-button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #002557;
+    color: white;
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.subscribe-button:hover {
+    background-color: #0056b3;
+}
