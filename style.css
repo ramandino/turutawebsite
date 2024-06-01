@@ -34,9 +34,9 @@ img{
 *{
     font-family: "Inter", sans-serif;
     text-decoration: none;
-    margin-top:5px;
     margin-left: 0;
     margin-right: 0;
+
     
 
 }
@@ -77,10 +77,11 @@ a:hover {
 h1{
     margin-left: 5rem;
     color: #007bff;
-    font-weight: bold;
+    font-weight:bold;
     font-size: 70px;
     margin-top: 9rem;
     margin-bottom: 0;
+    min-width: fit-content;
 }
 
 h4{
@@ -121,4 +122,18 @@ h4{
 
 .subscribe-button:hover {
     background-color: #0056b3;
+}
+
+.hero{
+    display: flex;
+    flex-wrap: nowrap;
+    min-width: fit-content;
+}
+
+.hero img{
+    margin-top: 3rem;
+    height: auto;
+    width: 900px;
+    margin-left: auto;
+
 }
