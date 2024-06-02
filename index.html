@@ -3,46 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/turuta/turutawebsite/images/icon.png">
-    <link rel="stylesheet" href="/turuta/turutawebsite/style.css">
+    <link rel="icon" type="image/x-icon" href="/turutawebsite/images/icon.png">
+    <link rel="stylesheet" href="/turutawebsite/style.css">
     <title>Inicio - turuta</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="nav">
-        <div class="logo">
-            <a href="#"> <img src="/turuta/turutawebsite/images/dark text.png"> 
+    <nav class="nav">
+        <div class="nav_container">
+            <a href="#" id="logo"><img src="/turutawebsite/images/dark text.png"> 
             </a> 
-        </div>
-        <div class="navleft">
-            <div id="navitems">
-                <a href="#">Soluciones</a>
-                <a href="#">Planes</a>
-                <a href="#">Contáctanos</a>
-            </div>
-        </div>   
-        <div id ="navright">
-            <a href="#">Inicia sesión</a>
-            <a href="#" id="live" style="color: white"> En Vivo</a>
-        </div>              
-    </div>
+            <ul class="navmenu">
+                <li class="opcionmenu">
+                    <a href="" class="opcionlink">Soluciones</a>
+                </li>
+                <li class="opcionmenu">
+                    <a href="" class="opcionlink">Planes</a>
+                </li>
+                <li class="opcionmenu">
+                    <a href="" class="opcionlink">Contactáctanos</a>
+                </li>
+                <li class="navboton" >
+                    <a href="#"id="boton1">Inicia sesion</a>
+                </li>
+                <li class="navboton" >
+                    <a href="#"id="boton2">En vivo</a>
+                </li>   
+            </ul>
+        </div>      
+    </nav>
+
+    <!-- "HERO SECTION" -->
 
     <div class="hero">
-        <h1 class="hero-text">todo, para<br>tu transporte <br>en autobús.</h1>
-        <img class="heroimg" src="/turuta/turutawebsite/images/heroimg.png"> 
+        <div class="herocontainer">
+            <div class="herotext">
+                <h1>todo, para tu transporte en autobus.</h1>
+                <h4>Gestiona  y rastrea tus usuarios, <br>conductores, vehículos, rutas y más.</h4>
+                <div class="newsletter">
+                    <form>
+                        <input type="email" class="email-input" placeholder="Tu email">
+                        <button type="submit" class="subscribe-button">Recibir información</button>
+                    </form>
+                </div>
+            </div>
+            <img class="herologo" src="/turutawebsite/images/heroimg.png">
+        </div>
     </div>
 
-    <h4>Gestiona  y rastrea tus usuarios, <br>conductores, vehículos, rutas y más.</h4>
-
-
-    <div class="newsletter">
-        <form>
-            <input type="email" class="email-input" placeholder="Tu email">
-            <button type="submit" class="subscribe-button">Recibir información</button>
-        </form>
+<!-- Section 2 -->
+    <div class="herosub">
+        <div class="subsection">
+            <h4 class="typingclass">tecnología para</h4>
+            <div class="typing">
+                <h4 class="realtyping">
+                    <span href="" class="typewrite" data-period="2000" data-type='[ "tu organización.", "tus usuarios.", "todos."]'>
+                        <span class="wrap" style="text-decoration: none;"></span>
+                    </span>
+                </h4>
+            </div>
+        </div>
     </div>
-    
-</body>
+
+
+<script src="/turutawebsite/app.js"></script>
+</body>    
 </html>
