@@ -230,8 +230,13 @@ h1{
 }
 
 #main1{
+    width: 400px;
+    height: auto;
+
+}
+#main2{
     width: 300px;
-    height: 300px;
+    height: 400px;
 
 }
 
@@ -244,7 +249,7 @@ h1{
 
 .headertext{
     display: flex;
-    margin-top: 6.5rem;
+    margin-top: 4.5rem;
     gap: 7rem;
     align-items: center;
     justify-content: center;
