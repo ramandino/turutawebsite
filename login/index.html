@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Animated Login Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <img id ="logo" src="/turutawebsite/images/dark text.png"> 
+      <form>
+        <div class="input-field">
+          <input type="text" required>
+          <label>Correo Electronico</label>
+        </div>
+        <div class="input-field">
+          <input class="pswrd" type="password" required>
+          <span class="show">SHOW</span>
+          <label>Contraseña</label>
+        </div>
+        <div class="button">
+          <div class="inner"></div>
+          <button>Inicio de Sesion</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      var input = document.querySelector('.pswrd');
+      var show = document.querySelector('.show');
+      show.addEventListener('click', active);
+      function active(){
+        if(input.type === "password"){
+          input.type = "text";
+          show.style.color = "#002557";
+          show.textContent = "HIDE";
+        }else{
+          input.type = "password";
+          show.textContent = "SHOW";
+          show.style.color = "#111";
+        }
+      }
+    </script>
+
+  </body>
+</html>
