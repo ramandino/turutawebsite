@@ -54,34 +54,38 @@ window.onload = function() {
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid fff}";
     document.head.appendChild(css);
 
-};
+
 // Send email to the webhook
-        fetch('https://hook.us1.make.com/zwpb1exfvdmapklq8wch4hn59d7ho06t
-', {
+    var form = document.querySelector('.newsletter form');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        var emailInput = form.querySelector('.email-input');
+        var email = emailInput.value;
+
+        fetch('YOUR_WEBHOOK_URL', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ email: email })
+             }, 
+             body: JSON.stringify({ email: email })
         })
         .then(response => {
-            if (response.ok) {
-                console.log('Success:', response);
-                // Optionally, show a success message to the user
-            } else {
-                return response.json().then(error => {
-                    console.error('Error:', error);
-                    // Optionally, show an error message to the user
+        if (response.ok) {
+            console.log('Success:', response);
+        // Optionally, show a success message to the user
+        } else {
+            return response.json().then(error => {
+                console.error('Error:', error);
+            // Optionally, show an error message to the user
                 });
             }
         })
         .catch((error) => {
-            console.error('Error:', error);
+             console.error('Error:', error);
             // Optionally, show an error message to the user
         });
     });
 };
-
-
 
 
