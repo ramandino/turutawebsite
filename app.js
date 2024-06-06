@@ -55,7 +55,32 @@ window.onload = function() {
     document.head.appendChild(css);
 
 };
-
+// Send email to the webhook
+        fetch('https://hook.us1.make.com/zwpb1exfvdmapklq8wch4hn59d7ho06t
+', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email: email })
+        })
+        .then(response => {
+            if (response.ok) {
+                console.log('Success:', response);
+                // Optionally, show a success message to the user
+            } else {
+                return response.json().then(error => {
+                    console.error('Error:', error);
+                    // Optionally, show an error message to the user
+                });
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            // Optionally, show an error message to the user
+        });
+    });
+};
 
 
 
