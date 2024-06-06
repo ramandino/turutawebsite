@@ -63,7 +63,7 @@ window.onload = function() {
         var emailInput = form.querySelector('.email-input');
         var email = emailInput.value;
 
-        fetch('YOUR_WEBHOOK_URL', {
+        fetch('https://hook.us1.make.com/zwpb1exfvdmapklq8wch4hn59d7ho06t', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
