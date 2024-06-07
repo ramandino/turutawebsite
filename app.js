@@ -63,16 +63,17 @@ window.onload = function() {
         var emailInput = form.querySelector('.email-input');
         var email = emailInput.value;
 
-        fetch('https://hook.us1.make.com/zwpb1exfvdmapklq8wch4hn59d7ho06t', {
+        fetch('https://hook.us1.make.com/l93rbrfhmwmvm6o7bw2fs3cswmbkt6cp',{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
-             }, 
-             body: JSON.stringify({ email: email })
+            }, 
+            body: JSON.stringify({ email: email })
         })
         .then(response => {
         if (response.ok) {
             console.log('Success:', response);
+            location.reload(); // Reload the page on success
         // Optionally, show a success message to the user
         } else {
             return response.json().then(error => {
@@ -82,10 +83,17 @@ window.onload = function() {
             }
         })
         .catch((error) => {
-             console.error('Error:', error);
-            // Optionally, show an error message to the user
+            console.error('Error:', error);
+            // Optionally, show an error message to the user'
+        });
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+        const subscribeButtons = document.querySelectorAll('.subscribe-button');
+    
+        subscribeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                location.reload();
+            });
         });
     });
 };
-
-
