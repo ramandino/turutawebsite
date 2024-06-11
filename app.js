@@ -1,3 +1,45 @@
+// Function to translate content to a specific language
+function translateContent(language) {
+    // Iterate over the sections and update the content according to the selected language
+    document.querySelectorAll("[data-es]").forEach(function(element) {
+        if (language === "en") {
+            element.textContent = element.getAttribute("data-en");
+        } else {
+            element.textContent = element.getAttribute("data-es");
+        }
+    });
+}
+
+// Translate to Spanish when the page loads
+window.addEventListener("DOMContentLoaded", function() {
+    translateContent("es");
+});
+
+// Anchor tag for translating to Spanish
+document.getElementById("spanishLink").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default action of the anchor tag
+    translateContent("es");
+});
+
+// Anchor tag for translating to English
+document.getElementById("englishLink").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default action of the anchor tag
+    translateContent("en");
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var TxtType = function(el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;

@@ -567,3 +567,16 @@ p {
     margin-bottom: 50px;
 }
 
+.botoneslang{
+    font-size: 15px;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-right: auto;
+    align-items: center;
+    margin-top: 5px;
+}
+    
+/* #english{
+    margin-right: 250px;
+} */
